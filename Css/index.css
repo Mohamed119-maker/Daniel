@@ -1,0 +1,717 @@
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+:root {
+    --h-color: #343434;
+    --p-color: #748182;
+    --main-color: #1b1b1b;
+}
+
+
+*h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+*p,
+span {
+    font-family: "Poppins", sans-serif !important;
+}
+
+/******** Start Nav  ********/
+
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease;
+    background-color: #fff;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.navbar .navbar-brand {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+}
+
+.navbar .navbar-nav {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.navbar-scrolled {
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    .nav-link {
+        color: #000 !important;
+    }
+
+    .nav-link.active::after {
+        background-color: #000 !important;
+    }
+
+    .navbar-brand {
+        color: #000 !important;
+    }
+
+    .navbar-toggler {
+        background-color: #000 !important;
+    }
+}
+
+/******** End Nav  ********/
+
+/******** Start Home  ********/
+
+#home {
+    background-image: linear-gradient(#0000009d, #0000009d), url(../imgs/bg.jpg);
+    background-size: cover;
+}
+
+#home .caption h5 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 55px;
+}
+
+#home .caption h1 {
+    margin-block: 20px;
+    font-size: 60px;
+    font-weight: 200;
+    line-height: 72px;
+}
+
+#home .home-icons ul li i {
+    color: white;
+    width: 40px;
+    height: 40px;
+    background-color: #00000074;
+    border-radius: 50%;
+}
+
+/******** End Home  ********/
+
+/******** Start About  ********/
+#about {
+    padding-block: 6rem;
+}
+
+#about .container .caption h3 {
+    color: #343434;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 33px;
+}
+
+#about .about-img::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 75%;
+    top: 32%;
+    left: 10%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+}
+
+#about .container .caption span {
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+#about .container .caption p {
+    color: var(--p-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.about span.btn {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.5714px;
+    padding: 10px 30px;
+    border: 1px var(--main-color) solid;
+    border-radius: 10px;
+}
+
+.about span.btn1 {
+    background-color: var(--main-color);
+    color: #fff;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.about span.btn1:hover {
+    background-color: white;
+    color: var(--main-color) !important;
+
+}
+
+.about span.btn2 {
+    background-color: white;
+    color: var(--main-color) !important;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.about span.btn2:hover {
+    background-color: var(--main-color);
+    color: white !important;
+
+}
+
+.progress {
+    --bs-progress-height: 1.5rem;
+    width: 80%;
+}
+
+.progress-bar {
+    background-color: #1c1c1c;
+    font-size: 14px;
+    line-height: 15px;
+    font-weight: 500;
+    transition: width 0.5s linear;
+}
+
+.about-btns span {
+    width: 100px !important;
+    padding-inline: 10px;
+    padding-block: 5px;
+    background-color: #343434;
+    color: white !important;
+}
+
+/******** End About  ********/
+
+/******** Start Servives  ********/
+
+#services {
+    background-color: #f7f7f7;
+    padding-bottom: 6rem;
+}
+
+#services .title h3 {
+    color: var(--h-color);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    position: relative;
+}
+
+#services .container .title h3::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 23px;
+    bottom: -12%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+}
+
+
+#services .container .row h6 {
+    color: var(--h-color);
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 20px;
+    padding: 5px;
+}
+
+#services .container .row .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#services .container .row .col-md-4 .card {
+    padding: 20px 10px;
+}
+
+#services .container .row p {
+    color: var(--p-color);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 5px;
+}
+
+#services .container .row .icn i {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #e0e0e095;
+    transition: all 0.5s;
+}
+
+#services .container .row .card:hover .icn i {
+    background-color: black;
+    color: white;
+}
+
+/******** End Services  ********/
+
+/******** Start Portfolio  ********/
+
+#portfolio .title h3 {
+    color: var(--h-color);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    position: relative;
+}
+
+#portfolio .container .title h3::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 23px;
+    bottom: -12%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+}
+
+#portfolio .nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    bottom: 5px;
+    left: 10px;
+    transition: 0.5s ease;
+}
+
+#portfolio .nav .nav-link.active::after {
+    width: 70%;
+}
+
+#portfolio .nav .nav-item {
+    position: relative;
+}
+
+#portfolio .nav .nav-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    color: #000;
+}
+
+#portfolio .picture .layer {
+    position: absolute;
+    width: 97%;
+    height: 97%;
+    background-color: white;
+    top: 5.6px;
+    left: 5.6px;
+    opacity: 0%;
+    transition: all 0.5s ease;
+}
+
+#portfolio .picture .layer .caption h6 {
+    letter-spacing: 2px;
+    color: var(--h-color);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 13px;
+    transform: translateY(-20px);
+    transition: all 0.5s;
+}
+
+#portfolio .picture .layer .caption .icns i {
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: black;
+    border: solid 1px black;
+    border-radius: 50%;
+    font-size: 12px;
+    transition: all 0.5s;
+}
+
+#portfolio .picture .layer .caption .icns {
+    transform: translateY(15px);
+    transition: all 0.5s;
+}
+
+#portfolio .picture .layer .caption .icns i:hover {
+    background-color: white;
+    color: black;
+}
+
+#portfolio .picture:hover .layer {
+    top: 4.8px;
+    opacity: 100%;
+}
+
+#portfolio .picture .layer:hover h6 {
+    transform: translatey(0px);
+}
+
+#portfolio .picture .layer:hover .icns {
+    transform: translatey(5px);
+}
+
+/******** End Portfolio  ********/
+
+/******** Start Testmonial  ********/
+#testmonial {
+    background-color: #f7f7f7;
+}
+
+#testmonial .title h3 {
+    color: var(--h-color);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    position: relative;
+}
+
+#testmonial .container .title h3::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 23px;
+    bottom: -12%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+}
+
+#carouselExampleIndicators {
+    padding: 40px 15px;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item p {
+    color: var(--p-color);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif !important;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item h6 {
+    color: var(--h-color-color);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    font-family: "Montserrat", sans-serif;
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item span {
+    color: #888;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 17px;
+    font-family: "Poppins", sans-serif !important;
+
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d2d1d1;
+}
+
+/******** End Testmonial  ********/
+
+
+/******** Start Counter  ********/
+
+
+#counter {
+    padding: 100px 70px;
+}
+
+#counter .icon i {
+    font-size: 30px;
+    padding-block: 10px;
+}
+
+#counter .item h3 {
+    padding-block: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 33px;
+    color: var(--h-color);
+    font-family: "Montserrat", sans-serif;
+}
+
+#counter .item p {
+    padding-block: 10px;
+    color: var(--p-color);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif !important;
+}
+
+/******** End Counter  ********/
+
+/******** Start Team  ********/
+#team {
+    background-color: #f7f7f7;
+}
+
+#team .title h3 {
+
+    color: var(--h-color);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    position: relative;
+}
+
+#team .container .title h3::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 23px;
+    bottom: -12%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+}
+
+
+#team .container .cards .img .team-layer {
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 2%;
+    bottom: 2%;
+    right: 2%;
+    left: 2%;
+    background-color: #fffffff3;
+    transform: rotateY(0);
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+#team .container .cards:hover .team-layer {
+    transform: rotateY(360deg);
+    opacity: 1;
+}
+
+#team .container .cards .img img {
+    transition: all 0.5s;
+}
+
+#team .container .cards .img:hover img {
+    transform: scale(1.2);
+
+}
+
+#team .container .cards .caption {
+    font-family: "Montserrat", sans-serif !important;
+    background-color: #4f4f4f;
+    color: #fff;
+    padding: 15px;
+}
+
+#team .container .cards .caption h4 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 28px;
+
+}
+
+#team .container .cards .caption h5 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+#team .container .cards .team-layer span i {
+    border: solid 1px #000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+#team .container .cards .team-layer span i:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/******** End Team  ********/
+
+/******** Start Contact  ********/
+#contact .title h3 {
+
+    color: var(--h-color);
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    position: relative;
+}
+
+#contact .container .title h3::after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 23px;
+    bottom: -12%;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+}
+
+#contact .contact-icns .contact-item span i {
+    width: 60px;
+    height: 60px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #000;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+#contact .contact-icns .contact-item span i:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+#contact .contact-icns .contact-item h6 {
+    padding-top: 10px;
+    color: var(--h-color);
+    font-family: "Montserrat", sans-serif !important;
+}
+
+#contact .contact-icns .contact-item p {
+    padding-block: 5px;
+    color: var(--p-color);
+    font-family: "Poppins", sans-serif !important;
+}
+
+.contact .container .text .name input,
+.email input {
+    outline: none;
+    border: none;
+    background-color: #f4f4f4;
+    height: 40px;
+    padding-left: 10px;
+    width: 100%;
+}
+
+.contact .container form .message {
+    border: none;
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 150px;
+    outline: none;
+}
+
+.contact .container form button {
+    padding: 10px 40px;
+    background-color: #000;
+    color: #fff;
+    border: 1px #000 solid;
+    transition: background-color .5s, color .5s;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
+
+.contact .container form button:hover {
+    background-color: #fff;
+    color: #343434;
+}
+
+/******** End Contact  ********/
+/******** Start footer  ********/
+
+#footer {
+    background-color: #1c1c1c;
+    color: var(--p-color);
+    text-align: center;
+    padding-block: 20px;
+    font-size: 13px;
+    line-height: 21px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-family: "Poppins", sans-serif !important;
+}
+
+
+#footer p {
+    padding-top: 10px;
+}
+
+/******** End footer  ********/
